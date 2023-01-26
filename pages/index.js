@@ -6,7 +6,7 @@ import Layout from '../layouts/layout'
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home () {
   return (
     <>
     {/* title */}
@@ -16,8 +16,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout />
-      <h1 className="text-3xl font-bold">This is Home Page</h1>
+      <Layout>
+        <section>
+          <h2>This is Home Page</h2>
+        </section>
+      </Layout>
     </>
   );
 }
