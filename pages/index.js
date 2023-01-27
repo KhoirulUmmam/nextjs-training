@@ -20,11 +20,9 @@ export default function Home () {
 
       {/* Navbar */}
         <div>
-          <Navbar />
           <h2 className="text-3xl font-bold">Home</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt, voluptate et sapiente aspernatur nisi similique voluptatem labore harum quis a ipsa, ut vel quas cupiditate consequatur sed itaque tenetur!</p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptate saepe facilis laboriosam consequatur omnis exercitationem rerum culpa assumenda, qui sequi. Earum illum ipsa voluptas atque assumenda laboriosam magni eaque?</p>
-          <Footer />
         </div>
     </>
   );
