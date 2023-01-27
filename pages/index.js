@@ -2,8 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +19,10 @@ export default function Home () {
 
       {/* Navbar */}
         <div>
-          <h2 className="text-3xl font-bold">Home</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt, voluptate et sapiente aspernatur nisi similique voluptatem labore harum quis a ipsa, ut vel quas cupiditate consequatur sed itaque tenetur!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptate saepe facilis laboriosam consequatur omnis exercitationem rerum culpa assumenda, qui sequi. Earum illum ipsa voluptas atque assumenda laboriosam magni eaque?</p>
+          <h2 className={styles.title}>Home</h2>
+          <p className={styles.text}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt, voluptate et sapiente aspernatur nisi similique voluptatem labore harum quis a ipsa, ut vel quas cupiditate consequatur sed itaque tenetur!</p>
+          <p className={styles.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptate saepe facilis laboriosam consequatur omnis exercitationem rerum culpa assumenda, qui sequi. Earum illum ipsa voluptas atque assumenda laboriosam magni eaque?</p>
+          <Link href="/steaks " className={styles.btn}>see all of steaks</Link>
         </div>
     </>
   );
