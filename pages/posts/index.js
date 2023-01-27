@@ -5,7 +5,10 @@ export default function Posts() {
   return (
     <>
       <Layout />
-      <div>This is Posts Page</div>
+      <div>
+        <p>This is Posts Page</p>
+        <span>Description</span>
+      </div>
     </>
   )
 }

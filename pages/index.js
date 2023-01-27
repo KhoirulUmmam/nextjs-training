@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import Layout from '../layouts/layout'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +17,15 @@ export default function Home () {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <section>
-          <h2>This is Home Page</h2>
-        </section>
-      </Layout>
+
+      {/* Navbar */}
+        <div>
+          <Navbar />
+          <h2 className="text-3xl font-bold">Home</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt, voluptate et sapiente aspernatur nisi similique voluptatem labore harum quis a ipsa, ut vel quas cupiditate consequatur sed itaque tenetur!</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptate saepe facilis laboriosam consequatur omnis exercitationem rerum culpa assumenda, qui sequi. Earum illum ipsa voluptas atque assumenda laboriosam magni eaque?</p>
+          <Footer />
+        </div>
     </>
   );
 }
