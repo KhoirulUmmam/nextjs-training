@@ -3,10 +3,19 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home () {
+
+  const router = useRouter();
+
+  const handleClick = () => {
+    console.log("place your order here")
+    router.push('/products')
+  }
+
   return (
     <>
     {/* title */}
@@ -23,6 +32,7 @@ export default function Home () {
           <p className={styles.text}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt, voluptate et sapiente aspernatur nisi similique voluptatem labore harum quis a ipsa, ut vel quas cupiditate consequatur sed itaque tenetur!</p>
           <p className={styles.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptate saepe facilis laboriosam consequatur omnis exercitationem rerum culpa assumenda, qui sequi. Earum illum ipsa voluptas atque assumenda laboriosam magni eaque?</p>
           <Link href="/steaks " className={styles.btn}>see all of steaks</Link>
+          <button onClick={handleClick} className={styles.btn}>see all of products</button>
         </div>
     </>
   );
