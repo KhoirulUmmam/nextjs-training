@@ -13,7 +13,7 @@ export default function Navbar() {
                 className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
                 href="/"
               >
-                <Image src="/karakter.png" alt="logo-shiro-store" width={50} height={20} className="ring-2 ring-white rounded-full"/>
+                <Image src="/logo.png" alt="logo-shiro-store" width={50} height={20} />
               </Link>
               <button
                 className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -41,6 +41,14 @@ export default function Navbar() {
                     href="/about"
                   >
                     About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                    href="/posts"
+                  >
+                    Post
                   </Link>
                 </li>
                 <li className="nav-item">

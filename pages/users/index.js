@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import User from '@/components/Users/Users'
 
 export async function getStaticProps(){
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -12,7 +13,7 @@ export async function getStaticProps(){
     }
 }
 
-export default function User({ users }) {
+export default function UserList({ users }) {
   return (
     <>
         <Head>
@@ -22,8 +23,7 @@ export default function User({ users }) {
         {users.map((user) => {
             return (
                 <div key={user.id}>
-                    <p>{user.name}</p>
-                    <p>{user.email}</p>
+                    <User user={user}/>
                 </div>
             )
         })}
