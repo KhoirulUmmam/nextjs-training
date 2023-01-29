@@ -9,27 +9,31 @@
 // }
 
 export async function getStaticProps() {
-    const res = await fetch('https://dummyjson.com/products')
-    const steaks = await res.json()
+    const res = await fetch('https://jsonplaceholder.typicode.com/users')
+    const data = await res.json();
+    console.log(data)
 
-    return {
+    return  {
         props: {
-            steaks,
-        }
+            users: data
+        },
     }
 }
-export default function Steak({steaks}) {
+export default function Steak({ users }) {
     return (
       <div>
           <h1>All of Steaks</h1>
-          {steaks.map(steak => {
-              <div key={steak.id}>
-                  <h3>{steak.title}</h3>
-              </div>
-        })}
+          {users.map((user) => {
+            return (
+                <div key={user.id}>
+                    <p>{user.name}</p>
+                    <p>{user.email}</p>
+                </div> 
+            )
+        })}     
       </div>
     )
-  }
+}
 
 
 

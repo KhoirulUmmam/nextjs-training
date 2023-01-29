@@ -31,8 +31,11 @@ export default function Home () {
           <h2 className={styles.title}>Home</h2>
           <p className={styles.text}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt, voluptate et sapiente aspernatur nisi similique voluptatem labore harum quis a ipsa, ut vel quas cupiditate consequatur sed itaque tenetur!</p>
           <p className={styles.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptate saepe facilis laboriosam consequatur omnis exercitationem rerum culpa assumenda, qui sequi. Earum illum ipsa voluptas atque assumenda laboriosam magni eaque?</p>
-          <Link href="/steaks " className={styles.btn}>see all of steaks</Link>
-          <button onClick={handleClick} className={styles.btn}>see all of products</button>
+          <div className="flex">
+            <Link href="/users" className={styles.btn}>see all of users</Link>
+            <Link href="/steaks" className={styles.btn}>see all of steaks</Link>
+            <button onClick={handleClick} className={styles.btn}>see all of products</button>
+          </div>
         </div>
     </>
   );
