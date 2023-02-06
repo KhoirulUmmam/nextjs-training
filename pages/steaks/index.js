@@ -1,39 +1,34 @@
-// export const getStaticProps = async () => {
+import React from 'react'
+import Link from 'next/link'
 
-//     const res = await fetch('https://dummyjson.com/products')
-//     const data = await res.json();
+export async function getStaticProps(){
+    const res = await fetch('http://localhost:4000/steaks')
+    const data = await res.json()
 
-//     return {
-//         props: { steaks: data}
-//     }
-// }
-
-export async function getStaticProps() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users')
-    const data = await res.json();
-    console.log(data)
-
-    return  {
+    return {
         props: {
-            users: data
-        },
+            steaks: data
+        }
     }
 }
-export default function Steak({ users }) {
-    return (
-      <div>
-          <h1>All of Steaks</h1>
-          {users.map((user) => {
+
+export default function SteakList({ steaks }) {
+  return (
+    <div>
+        <h1>List of Steaks</h1>
+        {steaks.map((steak) => {
             return (
-                <div key={user.id}>
-                    <p>{user.name}</p>
-                    <p>{user.email}</p>
-                </div> 
+                <div key={steak.id}>
+                    <Link href={`/steaks/${steak.id}`} passHref>
+                    <h2>
+                        {steak.id} {steak.title} {steak.price}
+                    </h2>
+                    </Link>
+                    <hr />
+                </div>
             )
-        })}     
-      </div>
-    )
+        })}
+    </div>
+
+  )
 }
-
-
-

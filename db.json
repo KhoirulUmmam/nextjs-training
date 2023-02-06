@@ -1,0 +1,22 @@
+{
+    "steaks": [
+        {
+            "id" : 1,
+            "title" : "Sirloin",
+            "price" : 40000,
+            "description" : "Sirloin adalah potongan daging yang berasal dari punggung sapi."
+        },
+        {
+            "id" : 2,
+            "title" : "Tenderloin",
+            "price" : 70000,
+            "description" : "Tenderloin adalah daging dari bagian tengah badan sapi."
+        },
+        {
+            "id" : 3,
+            "title" : "Tomahawk",
+            "price" : 90000,
+            "description" : "Daging Tomahawk adalah potongan ribeye daging sapi yang memiliki tulang rusuk yg diambil dari bagian Rib-tulang di atas, dipotong dari tulang rusuk depan dengan tulang rusuknya yang tersisa."
+        }
+    ]
+}
